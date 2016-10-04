@@ -1,0 +1,14 @@
+CREATE TABLE public.history
+(
+   ord smallserial PRIMARY KEY,
+   datetime timestamp without time zone,
+   login character varying(32),
+   name character varying(32),
+   message character varying(256)
+)
+WITH (
+  OIDS = FALSE
+)
+;
+ALTER TABLE public.history
+  OWNER TO postgres;
